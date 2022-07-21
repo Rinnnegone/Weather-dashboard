@@ -1,106 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400&family=Montserrat:wght@200;300;400;500&family=Open+Sans:wght@400;600;700&family=Staatliches&display=swap"
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400&family=Montserrat:wght@200;300;400;500&family=Open+Sans:wght@400;600;700&family=Staatliches&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/stylesheet.css"/>
-    <title>Weather Dashboard</title>
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/stylesheet.css" />
+  <title>Weather Dashboard</title>
 </head>
-<body>
-    <header class="">
-        <div class="">
-            <h1>
-                <p id="">Date:</p>
-            </h1>
-        </div>
-    </header>
 
-    <div class="">
-        <section class="">
-            <div class="">
-                <h2>Search for City:</h2>
-                <input class="" id="userCityInput" placeholder="City..."/>
-                <button type="button" class="" id="citySearch"
-                onClick="searchBtn()">Search</button>
-            </div>
-        </section>
-
-        <section class="">
-            <h2 id="chosenCity">City...</h2>
-            <img src="" id="">
-            <p id="temp">Temperature:</p>
-            <p id="tempLoHi"></p>
-            <p id="wind">Wind:</p>
-            <p id="humidity">Humidity:</p>
-            <P id="uvIndex">UV Index:</P>
-        </section>
+<body class="pb-5">
+  <header class="header jumbotron jumbotron-fluid">
+    <div class="text-center">
+      <h1>Weather Dashboard</h1>
+      <p id="date">Date</p>
+      <img>
     </div>
+  </header>
 
-    <div class="">
-        <section class="row">
-            <h3 class="">5 day Forecast</h3>
 
-            <div class="fiveDay col-2 px-2 border border-info">
-                <p id="datefiveday2">Date:</p>
-                <icon id=""></icon>
-                <p id="temp">Temperature:</p>
-                <p id="">High/Low:</p>
-                <p id="">Wind:</p>
-                <p id="">Humidity:</p>
-                <p id="">UV Index:</p>
-            </div>
+  <div class="row m-3">
+    <section class="usersCity col-6 col-offset-3">
+      <div class="container">
+        <h2>Search for a City:</h2>
+        <input class="form-control" id="userCityInput" placeholder="City..." />
+        <button type="button" class="btn btn-outline-info btn-block" id="citySearch"
+          onclick="searchBtn()">Search</button>
+      </div>
 
-            <div class="fiveDay col-2 px-2 border border-info">
-                <p id="">Date:</p>
-                <icon id=""></icon>
-                <p id="">Temperature:</p>
-                <p id="">High/Low:</p>
-                <p id="">Wind:</p>
-                <p id="">Humidity:</p>
-                <p id="">UV Index:</p>
-            </div>
+      
+      <!-- <button>Austin</button>
+        </div> -->
+    </section>
 
-            <div class="fiveDay col-2 px-2 border border-info">
-                <p id="">Date:</p>
-                <icon id=""></icon>
-                <p id="">Temperature:</p>
-                <p id="">High/Low:</p>
-                <p id="">Wind:</p>
-                <p id="">Humidity:</p>
-                <p id="">UV Index:</p>
-            </div>
+    <section class="container col-6 col-offset-3">
+      <h2 id="chosenCity">City...</h2>
+      <img src="" id="icon">
+      <p id="temp">Temperature:</p>
+      <p id="tempLoHi"></p>
+      <p id="wind">Wind:</p>
+      <p id="humidity">Humidity:</p>
+      <p id="uvIndex">UV Index:</p>
+    </section>
+    <!-- </div> -->
+  </div>
 
-            <div class="fiveDay col-2 px-2 border border-info">
-                <p id="">Date:</p>
-                <icon id=""></icon>
-                <p id="">Temperature:</p>
-                <p id="">High/Low:</p>
-                <p id="">Wind:</p>
-                <p id="">Humidity:</p>
-                <p id="">UV Index:</p>
-            </div>
+  <div class="container">
+    <section class="row">
+      <h3 class="col-12">5-Day Forecast:</h3>
 
-            <div class="fiveDay col-2 px-2 border border-info">
-                <p id="">Date:</p>
-                <icon id=""></icon>
-                <p id="">Temperature:</p>
-                <p id="">High/Low:</p>
-                <p id="">Wind:</p>
-                <p id="">Humidity:</p>
-                <p id="">UV Index:</p>
-            </div>
-        </section>
-    </div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="script.js"></script>
-    
+      <div class="fiveDay col-2 px-2 border border-info">
+        <p id="dateFiveDay2 day">Date:</p>
+        <icon id="iconFiveDay2"></icon>
+        <p id="tempFiveDay2">Temperature:</p>
+        <p id="tempLoHiFiveFiveDay2">High/Low:</p>
+        <p id="windFiveDay2">Wind:</p>
+        <p id="humidityFiveDay2">Humidity</p>
+        <p id="uvIndexFiveDay2">UV Index:</p>
+      </div>
+
+      <div class="fiveDay col-2 px-2 border border-info">
+        <p id="dateFiveDay3 day">Date:</p>
+        <icon id="iconFiveDay3"></icon>
+        <p id="tempFiveDay3">Temperature:</p>
+        <p id="tempLoHiFiveFiveDay3">High/Low:</p>
+        <p id="windFiveDay3">Wind:</p>
+        <p id="humidityFiveDay3">Humidity</p>
+        <p id="uvIndexFiveDay3">UV Index:</p>
+      </div>
+
+      <div class="fiveDay col-2 px-2 border border-info">
+        <p id="dateFiveDay4 day">Date:</p>
+        <icon id="iconFiveDay4"></icon>
+        <p id="tempFiveDay4">Temperature:</p>
+        <p id="tempLoHiFiveFiveDay4">High/Low:</p>
+        <p id="windFiveDay4">Wind:</p>
+        <p id="humidityFiveDay4">Humidity</p>
+        <p id="uvIndexFiveDay4">UV Index:</p>
+      </div>
+
+      <div class="fiveDay col-2 px-2 border border-info">
+        <p id="dateFiveDay5 day">Date:</p>
+        <icon id="iconFiveDay5"></icon>
+        <p id="tempFiveDay5">Temperature:</p>
+        <p id="tempLoHiFiveFiveDay5">High/Low:</p>
+        <p id="windFiveDay5">Wind:</p>
+        <p id="humidityFiveDay5">Humidity</p>
+        <p id="uvIndexFiveDay5">UV Index:</p>
+      </div>
+
+      <div class="fiveDay col-2 px-2 border border-info">
+        <p id="dateFiveDay6 day">Date:</p>
+        <icon id="iconFiveDay6"></icon>
+        <p id="tempFiveDay6">Temperature:</p>
+        <p id="tempLoHiFiveFiveDay6">High/Low:</p>
+        <p id="windFiveDay6">Wind:</p>
+        <p id="humidityFiveDay6">Humidity</p>
+        <p id="uvIndexFiveDay6">UV Index:</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
